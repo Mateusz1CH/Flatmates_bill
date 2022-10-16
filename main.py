@@ -16,7 +16,7 @@ class Flatmate:
         self.days_in_house = days_in_house
 
     def pays(self, bill):
-        pass
+        return bill / 2
 
 
 class PdfReport:
