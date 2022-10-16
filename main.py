@@ -11,7 +11,7 @@ class Flatmate:
     """
     Creates a flatmate person who lives in the flat and pays a share of the bill
     """
-    def __init__(self, name, days_in_hours):
+    def __init__(self, name, days_in_house):
         self.name = name
         self.days_in_house = days_in_house
 
@@ -30,3 +30,8 @@ class PdfReport:
     def generate(self, flatmate1, flatmate2, bill):
         pass
 
+the_bill = Bill(amount = 6000, period = "August 2022")
+Antonio = Flatmate(name = 'Antonio', days_in_house = 20)
+Antonina = Flatmate(name = 'Antonina', days_in_house = '29')
+
+print(Antonina.pays(bill=the_bill))
