@@ -1,5 +1,6 @@
 import webbrowser
 
+
 from fpdf import FPDF
 
 
