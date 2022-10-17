@@ -43,7 +43,7 @@ class PdfReport:
         pdf.cell(w=100, h=40, txt='Period:', border=0)
         pdf.cell(w=150, h=40, txt=bill.period, border=0, ln=1)
 
-        pdf.output("bill.pdf")
+        pdf.output(self.filename)
 
 the_bill = Bill(amount = 6000, period = "August 2022")
 Antonio = Flatmate(name = 'Antonio', days_in_house = 20)
@@ -51,3 +51,6 @@ Antonina = Flatmate(name = 'Antonina', days_in_house = 29)
 
 print('Antonio pays: ', Antonio.pays(bill=the_bill, flatmate2 = Antonina))
 print('Antonina pays: ', Antonina.pays(bill=the_bill, flatmate2 = Antonio))
+
+pdf_report = PdfReport(filename = "Reporto_uno.pdf")
+pdf_report.generate(flatmate1=Antonio, flatmate2=Antonina, bill=the_bill)
